@@ -1,56 +1,67 @@
 import React from 'react';
+import { ExternalLink, FileText } from 'lucide-react';
 
 const CanadaOverview = () => {
   return (
-    <div className="space-y-4">
-      <div className="bg-gradient-to-r from-red-600 via-white to-red-600 text-gray-900 p-4 rounded-lg text-center">
-        <h3 className="text-2xl font-bold">🇨🇦 CANADA</h3>
-        <p className="text-sm mt-1">Multiple Pathways to Work & Residency</p>
-      </div>
-
-      <div className="bg-green-50 border-l-4 border-green-500 p-3">
-        <h4 className="font-bold text-green-900">U.S. Citizen Benefits:</h4>
-        <ul className="text-sm text-green-800 mt-2 space-y-1">
-          <li>✓ No tourist visa required (6 months visit)</li>
-          <li>✓ USMCA streamlined work permits for certain professions</li>
-          <li>✓ Strong LGBT protections & gender identity rights</li>
-          <li>✓ Same-sex marriage recognized (spousal sponsorship available)</li>
-        </ul>
-      </div>
-
-      <div className="grid grid-cols-2 gap-3">
-        <div className="bg-blue-50 border border-blue-200 p-3 rounded">
-          <h4 className="font-bold text-blue-900 text-sm mb-2">Employer-Specific Permit</h4>
-          <ul className="text-xs space-y-1">
-            <li>• Requires job offer</li>
-            <li>• Usually needs LMIA</li>
-            <li>• USMCA may exempt LMIA</li>
-            <li>• Processing: 60-120 days</li>
-          </ul>
-        </div>
-        <div className="bg-purple-50 border border-purple-200 p-3 rounded">
-          <h4 className="font-bold text-purple-900 text-sm mb-2">Open Work Permit</h4>
-          <ul className="text-xs space-y-1">
-            <li>• Work for any employer</li>
-            <li>• For spouses, graduates</li>
-            <li>• More flexible</li>
-            <li>• Specific eligibility</li>
-          </ul>
+    <div className="space-y-6">
+      <div className="bg-white p-6 rounded-lg shadow-md border border-red-100">
+        <h2 className="text-2xl font-bold text-red-700 mb-4 flex items-center">
+          🇨🇦 Canada Overview
+        </h2>
+        <div className="grid md:grid-cols-2 gap-6">
+          <div className="space-y-4">
+            <h3 className="font-semibold text-lg text-gray-800">Visa Categories</h3>
+            <ul className="list-disc pl-5 space-y-2 text-gray-600">
+              <li><strong>Express Entry:</strong> Skilled worker path</li>
+              <li><strong>Work Permits:</strong> Direct employer sponsorship</li>
+              <li><strong>Study Permits:</strong> Leading to post-grad work</li>
+            </ul>
+          </div>
+          <div className="bg-red-50 p-4 rounded-md">
+            <h3 className="font-semibold text-red-800 mb-2">Key Considerations</h3>
+            <ul className="text-sm space-y-2 text-red-700">
+              <li>Points-based system (CRS score)</li>
+              <li>French language skills are a major bonus</li>
+              <li>High demand for healthcare and tech</li>
+            </ul>
+          </div>
         </div>
       </div>
 
-      <div className="bg-orange-50 p-3 rounded">
-        <h4 className="font-bold text-sm mb-2">Pathways to Permanent Residence:</h4>
-        <div className="text-xs space-y-1">
-          <p><strong>Express Entry:</strong> Points-based system, ~6 months processing</p>
-          <p><strong>Provincial Nominee Programs:</strong> Province-specific needs</p>
-          <p><strong>Spousal Sponsorship:</strong> For partners of citizens/PRs, ~12 months</p>
+      <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
+        <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center">
+          <FileText className="mr-2 text-gray-600" size={24} />
+          Official Resources
+        </h3>
+        <div className="grid md:grid-cols-3 gap-4">
+          <a 
+            href="https://www.canada.ca/en/immigration-refugees-citizenship.html" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="flex items-center p-3 bg-white rounded border border-gray-200 hover:border-red-400 hover:text-red-600 transition-colors shadow-sm"
+          >
+            <ExternalLink className="mr-2" size={18} />
+            IRCC Official Portal
+          </a>
+          <a 
+            href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry.html" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="flex items-center p-3 bg-white rounded border border-gray-200 hover:border-red-400 hover:text-red-600 transition-colors shadow-sm"
+          >
+            <ExternalLink className="mr-2" size={18} />
+            Express Entry Guide
+          </a>
+          <a 
+            href="https://ca.usembassy.gov/embassy-consulates/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="flex items-center p-3 bg-white rounded border border-gray-200 hover:border-red-400 hover:text-red-600 transition-colors shadow-sm"
+          >
+            <ExternalLink className="mr-2" size={18} />
+            U.S. Embassy Canada
+          </a>
         </div>
-      </div>
-
-      <div className="bg-gray-100 p-2 rounded text-xs">
-        <strong>Best Cities:</strong> Toronto (largest LGBTQ+ community), Vancouver (progressive, expensive), 
-        Montreal (French required), Ottawa (government jobs)
       </div>
     </div>
   );
