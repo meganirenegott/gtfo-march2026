@@ -1,61 +1,58 @@
 import React from 'react';
+import { ExternalLink, FileText } from 'lucide-react';
 
 const UruguayOverview = () => {
   return (
-    <div className="space-y-4">
-      <div className="bg-gradient-to-r from-blue-400 via-white to-blue-400 text-gray-900 p-4 rounded-lg text-center">
-        <h3 className="text-2xl font-bold">🇺🇾 URUGUAY</h3>
-        <p className="text-sm mt-1">"Switzerland of South America"</p>
-      </div>
-
-      <div className="bg-blue-50 border-l-4 border-blue-500 p-3">
-        <h4 className="font-bold text-blue-900">Why Uruguay?</h4>
-        <ul className="text-sm text-blue-800 mt-2 space-y-1">
-          <li>✓ Most straightforward residency in Latin America</li>
-          <li>✓ Strong LGBT protections (2nd in Americas to legalize same-sex marriage)</li>
-          <li>✓ Stable democracy, low corruption</li>
-          <li>✓ Universal healthcare, high literacy (98.4%)</li>
-          <li>✓ Lower cost of living than U.S.</li>
-        </ul>
-      </div>
-
-      <div className="grid grid-cols-3 gap-2 text-center text-xs">
-        <div className="bg-white border border-gray-200 p-2 rounded">
-          <div className="font-bold">Tourist Entry</div>
-          <div className="text-2xl font-bold text-blue-600">90 days</div>
-          <div className="text-gray-600">No visa required</div>
-        </div>
-        <div className="bg-white border border-gray-200 p-2 rounded">
-          <div className="font-bold">Citizenship Wait</div>
-          <div className="text-2xl font-bold text-green-600">3-5 yrs</div>
-          <div className="text-gray-600">After residency</div>
-        </div>
-        <div className="bg-white border border-gray-200 p-2 rounded">
-          <div className="font-bold">Min. Income</div>
-          <div className="text-2xl font-bold text-purple-600">~$1,500</div>
-          <div className="text-gray-600">per month</div>
+    <div className="space-y-6">
+      <div className="bg-white p-6 rounded-lg shadow-md border border-blue-100">
+        <h2 className="text-2xl font-bold text-blue-700 mb-4 flex items-center">
+          🇺🇾 Uruguay Overview
+        </h2>
+        <div className="grid md:grid-cols-2 gap-6">
+          <div className="space-y-4">
+            <h3 className="font-semibold text-lg text-gray-800">Key Benefits</h3>
+            <ul className="list-disc pl-5 space-y-2 text-gray-600">
+              <li>Strong LGBTQ+ protections</li>
+              <li>Straightforward residency process</li>
+              <li>High literacy and stable democracy</li>
+            </ul>
+          </div>
+          <div className="bg-blue-50 p-4 rounded-md">
+            <h3 className="font-semibold text-blue-800 mb-2">Key Considerations</h3>
+            <ul className="text-sm space-y-2 text-blue-700">
+              <li>Relatively small expat community</li>
+              <li>Spanish language is essential</li>
+              <li>Higher cost of living than some neighbors</li>
+            </ul>
+          </div>
         </div>
       </div>
 
-      <div className="bg-yellow-50 border border-yellow-200 p-3 rounded">
-        <h4 className="font-bold text-sm mb-2">Application Must Be Done IN Uruguay</h4>
-        <ol className="text-xs space-y-1 list-decimal list-inside">
-          <li>Enter as tourist</li>
-          <li>Find local address, register with police</li>
-          <li>Schedule residency interview</li>
-          <li>Submit documents (apostilled, translated to Spanish)</li>
-          <li>Receive "Residente en trámite" status (resident rights while processing)</li>
-          <li>Get Cédula (Uruguayan ID card)</li>
-        </ol>
-      </div>
-
-      <div className="bg-red-50 p-3 rounded text-xs">
-        <strong>Physical Presence:</strong> Must spend at least 6 months/year in Uruguay to maintain residency
-      </div>
-
-      <div className="bg-green-50 p-3 rounded text-xs">
-        <strong>Passport Benefits:</strong> Uruguayan passport = visa-free access to 150+ countries 
-        (Schengen, UK, Japan)
+      <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
+        <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center">
+          <FileText className="mr-2 text-gray-600" size={24} />
+          Official Resources
+        </h3>
+        <div className="grid md:grid-cols-2 gap-4">
+          <a 
+            href="https://www.gub.uy/ministerio-interior/migraciones" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="flex items-center p-3 bg-white rounded border border-gray-200 hover:border-blue-400 hover:text-blue-600 transition-colors shadow-sm"
+          >
+            <ExternalLink className="mr-2" size={18} />
+            Dirección Nacional de Migración
+          </a>
+          <a 
+            href="https://uy.usembassy.gov/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="flex items-center p-3 bg-white rounded border border-gray-200 hover:border-blue-400 hover:text-blue-600 transition-colors shadow-sm"
+          >
+            <ExternalLink className="mr-2" size={18} />
+            U.S. Embassy Uruguay
+          </a>
+        </div>
       </div>
     </div>
   );
