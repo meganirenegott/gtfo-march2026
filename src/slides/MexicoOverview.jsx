@@ -1,61 +1,66 @@
 import React from 'react';
+import { ExternalLink, FileText } from 'lucide-react';
 
 const MexicoOverview = () => {
   return (
-    <div className="space-y-4">
-      <div className="bg-gradient-to-r from-green-400 to-red-400 text-blue-900 p-4 rounded-lg text-center">
-        <h3 className="text-2xl font-bold">🇲🇽 MEXICO</h3>
-        <p className="text-sm mt-1">Temporary Resident Visa (Digital Nomad Alternative)</p>
-      </div>
-
-      <div className="grid grid-cols-2 gap-4">
-        <div className="bg-white border border-gray-200 rounded p-3">
-          <div className="text-xs text-gray-600 mb-1">DURATION</div>
-          <div className="text-lg font-bold">1 year</div>
-          <div className="text-xs text-gray-600">Renewable up to 4 years total</div>
-        </div>
-        <div className="bg-white border border-gray-200 rounded p-3">
-          <div className="text-xs text-gray-600 mb-1">PROCESSING TIME</div>
-          <div className="text-lg font-bold">2-6 weeks</div>
-          <div className="text-xs text-gray-600">Plus registration in Mexico</div>
-        </div>
-      </div>
-
-      <div className="bg-blue-50 border border-blue-200 p-4 rounded">
-        <h4 className="font-bold mb-2">Financial Requirements (Choose ONE):</h4>
-        <div className="space-y-2 text-sm">
-          <div className="flex justify-between items-center bg-white p-2 rounded">
-            <span>Monthly income (6 months):</span>
-            <span className="font-bold">$3,737.95 USD</span>
+    <div className="space-y-6">
+      <div className="bg-white p-6 rounded-lg shadow-md border border-green-100">
+        <h2 className="text-2xl font-bold text-green-700 mb-4 flex items-center">
+          🇲🇽 Mexico Overview
+        </h2>
+        <div className="grid md:grid-cols-2 gap-6">
+          <div className="space-y-4">
+            <h3 className="font-semibold text-lg text-gray-800">Visa Types</h3>
+            <ul className="list-disc pl-5 space-y-2 text-gray-600">
+              <li><strong>Temporary Resident:</strong> 1-4 years stay</li>
+              <li><strong>Permanent Resident:</strong> Indefinite stay</li>
+              <li><strong>Digital Nomad:</strong> Under the Temp Resident umbrella</li>
+            </ul>
           </div>
-          <div className="flex justify-between items-center bg-white p-2 rounded">
-            <span>Savings (12 months):</span>
-            <span className="font-bold">$73,257.65 USD</span>
-          </div>
-          <div className="flex justify-between items-center bg-white p-2 rounded">
-            <span>Mexican property value:</span>
-            <span className="font-bold">$346,000+ USD</span>
+          <div className="bg-green-50 p-4 rounded-md">
+            <h3 className="font-semibold text-green-800 mb-2">Key Considerations</h3>
+            <ul className="text-sm space-y-2 text-green-700">
+              <li>Relatively low cost of living</li>
+              <li>Accessible financial requirements for many</li>
+              <li>Excellent healthcare in major cities</li>
+            </ul>
           </div>
         </div>
-        <p className="text-xs text-gray-600 mt-2">Add ~$861 per dependent</p>
       </div>
 
-      <div className="grid grid-cols-2 gap-2 text-xs">
-        <div className="bg-green-50 p-2 rounded">
-          <div className="font-bold text-green-900">✓ You CAN:</div>
-          <ul className="text-green-800 mt-1 space-y-1">
-            <li>• Work remotely for foreign employers</li>
-            <li>• Open bank accounts</li>
-            <li>• Travel freely</li>
-            <li>• Access healthcare</li>
-          </ul>
-        </div>
-        <div className="bg-red-50 p-2 rounded">
-          <div className="font-bold text-red-900">✗ You CANNOT:</div>
-          <ul className="text-red-800 mt-1 space-y-1">
-            <li>• Work for Mexican companies</li>
-            <li>• Take local jobs</li>
-          </ul>
+      <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
+        <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center">
+          <FileText className="mr-2 text-gray-600" size={24} />
+          Official Resources
+        </h3>
+        <div className="grid md:grid-cols-3 gap-4">
+          <a 
+            href="https://www.gob.mx/inm" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="flex items-center p-3 bg-white rounded border border-gray-200 hover:border-green-400 hover:text-green-600 transition-colors shadow-sm"
+          >
+            <ExternalLink className="mr-2" size={18} />
+            Instituto Nacional de Migración
+          </a>
+          <a 
+            href="https://consulmex.sre.gob.mx/sanfrancisco/index.php/visas-ingles" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="flex items-center p-3 bg-white rounded border border-gray-200 hover:border-green-400 hover:text-green-600 transition-colors shadow-sm"
+          >
+            <ExternalLink className="mr-2" size={18} />
+            Consular Services Guide
+          </a>
+          <a 
+            href="https://mx.usembassy.gov/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="flex items-center p-3 bg-white rounded border border-gray-200 hover:border-green-400 hover:text-green-600 transition-colors shadow-sm"
+          >
+            <ExternalLink className="mr-2" size={18} />
+            U.S. Embassy Mexico
+          </a>
         </div>
       </div>
     </div>
